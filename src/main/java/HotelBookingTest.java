@@ -2,13 +2,15 @@ import com.sun.javafx.PlatformUtil;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.chrome.ChromeOptions;
 import org.openqa.selenium.support.FindBy;
+import org.openqa.selenium.support.PageFactory;
 import org.openqa.selenium.support.ui.Select;
 import org.testng.annotations.Test;
 
 public class HotelBookingTest {
 
-    WebDriver driver = new ChromeDriver();
+
 
     @FindBy(linkText = "Hotels")
     private WebElement hotelLink;
@@ -22,11 +24,18 @@ public class HotelBookingTest {
     @FindBy(id = "travellersOnhome")
     private WebElement travellerSelection;
 
+    
     @Test
-    public void shouldBeAbleToSearchForHotels() {
+    public void shouldBeAbleToSearchForHotelsNow() {
         setDriverPath();
+        ChromeOptions options = new ChromeOptions();
+       
 
+        //Add chrome switch to disable notification - "**--disable-notifications**"
+        options.addArguments("--disable-notifications");
+        WebDriver driver = new ChromeDriver(options);
         driver.get("https://www.cleartrip.com/");
+        driver.manage().window().maximize();
         hotelLink.click();
 
         localityTextBox.sendKeys("Indiranagar, Bangalore");
@@ -43,7 +52,7 @@ public class HotelBookingTest {
             System.setProperty("webdriver.chrome.driver", "chromedriver");
         }
         if (PlatformUtil.isWindows()) {
-            System.setProperty("webdriver.chrome.driver", "chromedriver.exe");
+            System.setProperty("webdriver.chrome.driver", System.getProperty("user.dir")+"//chromedriver.exe");
         }
         if (PlatformUtil.isLinux()) {
             System.setProperty("webdriver.chrome.driver", "chromedriver_linux");
