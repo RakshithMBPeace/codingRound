@@ -1,17 +1,69 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results skipped="0" failed="0" ignored="0" total="1" passed="1">
+<testng-results skipped="0" failed="0" ignored="0" total="3" passed="3">
   <reporter-output>
   </reporter-output>
-  <suite name="Default suite" duration-ms="44027" started-at="2019-06-13T17:10:12Z" finished-at="2019-06-13T17:10:56Z">
+  <suite name="testVarganeSuite" duration-ms="96270" started-at="2019-06-14T10:34:33Z" finished-at="2019-06-14T10:36:10Z">
     <groups>
     </groups>
-    <test name="Default test" duration-ms="44027" started-at="2019-06-13T17:10:12Z" finished-at="2019-06-13T17:10:56Z">
+    <test name="flight booking" duration-ms="37938" started-at="2019-06-14T10:34:33Z" finished-at="2019-06-14T10:35:11Z">
+      <class name="codingRound.PageObjectImpl.flightBookingTest">
+        <test-method status="PASS" signature="getFlightSchedules(java.lang.String, java.lang.String, java.lang.String)[pri:0, instance:codingRound.PageObjectImpl.flightBookingTest@7f9a81e8]" name="getFlightSchedules" duration-ms="37864" started-at="2019-06-14T16:04:34Z" finished-at="2019-06-14T16:05:11Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[Bangalore]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[Delhi]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[https://www.cleartrip.com/]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- getFlightSchedules -->
+      </class> <!-- codingRound.PageObjectImpl.flightBookingTest -->
+    </test> <!-- flight booking -->
+    <test name="hotel booking" duration-ms="28098" started-at="2019-06-14T10:35:12Z" finished-at="2019-06-14T10:35:40Z">
+      <class name="codingRound.PageObjectImpl.hotelBookingTest">
+        <test-method status="PASS" signature="searchHotel(java.lang.String, java.lang.String)[pri:0, instance:codingRound.PageObjectImpl.hotelBookingTest@cb5822]" name="searchHotel" duration-ms="28089" started-at="2019-06-14T16:05:12Z" finished-at="2019-06-14T16:05:40Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[https://www.cleartrip.com/]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[Indiranagara, Bengaluru]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- searchHotel -->
+      </class> <!-- codingRound.PageObjectImpl.hotelBookingTest -->
+    </test> <!-- hotel booking -->
+    <test name="signIn test" duration-ms="30098" started-at="2019-06-14T10:35:40Z" finished-at="2019-06-14T10:36:10Z">
       <class name="codingRound.PageObjectImpl.signInTest">
-        <test-method status="PASS" signature="signIn()[pri:0, instance:codingRound.PageObjectImpl.signInTest@51efea79]" name="signIn" duration-ms="43959" started-at="2019-06-13T22:40:12Z" finished-at="2019-06-13T22:40:56Z">
+        <test-method status="PASS" signature="signIn(java.lang.String)[pri:0, instance:codingRound.PageObjectImpl.signInTest@14acaea5]" name="signIn" duration-ms="30084" started-at="2019-06-14T16:05:40Z" finished-at="2019-06-14T16:06:10Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[https://www.cleartrip.com/]]>
+              </value>
+            </param>
+          </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- signIn -->
       </class> <!-- codingRound.PageObjectImpl.signInTest -->
-    </test> <!-- Default test -->
-  </suite> <!-- Default suite -->
+    </test> <!-- signIn test -->
+  </suite> <!-- testVarganeSuite -->
 </testng-results>

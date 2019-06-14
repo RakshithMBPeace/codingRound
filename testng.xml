@@ -1,0 +1,27 @@
+<?xml version = "1.0" encoding = "UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="testVarganeSuite" verbose="1">
+  <parameter name="url" value="https://www.cleartrip.com/" />
+  <test name="flight booking">
+    <classes>
+      <class name="codingRound.PageObjectImpl.flightBookingTest" />
+       <parameter name="origin" value="Bangalore" />
+    <parameter name="destPlace" value="Delhi" />
+    </classes>
+  </test>
+ 
+  <test name="hotel booking">
+    <classes>
+      <class name="codingRound.PageObjectImpl.hotelBookingTest" />
+      <parameter name="locality" value="Indiranagara, Bengaluru" />
+    </classes>
+  </test>
+  
+   <test name="signIn test">
+    <classes>
+      <class name="codingRound.PageObjectImpl.signInTest" />
+      <parameter name="locality" value="Indiranagara, Bengaluru" />
+    </classes>
+  </test>
+ 
+</suite>

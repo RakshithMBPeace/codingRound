@@ -13,6 +13,7 @@ public class testBase {
 public 	ChromeOptions options;
 
 	public WebDriver driver;
+	public static String url;
 	   public void setDriverPath() {
 	        if (PlatformUtil.isMac()) {
 	            System.setProperty("webdriver.chrome.driver", "chromedriver");
@@ -28,8 +29,8 @@ public 	ChromeOptions options;
 	        }
 	    }
 	   
-	   public void getUrl() {
-		   driver.get("https://www.cleartrip.com/");
+	   public void getUrl(String url) {
+		   driver.get(url);
 	   }
 	   
 	   public void maximizeWindow() {
@@ -39,7 +40,7 @@ public 	ChromeOptions options;
 	   public static void main(String[] args) {
 		   testBase test = new testBase();
 		   test.setDriverPath();
-		   test.getUrl();
+		   test.getUrl(url);
 		   test.maximizeWindow();
 	   }
 }
